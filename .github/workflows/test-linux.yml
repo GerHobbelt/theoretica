@@ -1,0 +1,15 @@
+name: Test on Linux
+
+on:
+  push:
+  pull_request:
+  
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: make all
+      run: make all

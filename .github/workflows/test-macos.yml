@@ -1,0 +1,15 @@
+name: Test on MacOS
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: make all
+      run: make DISABLE_OPENMP=1 all

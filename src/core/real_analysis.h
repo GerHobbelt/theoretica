@@ -10,6 +10,10 @@
 #include "./constants.h"
 #include "./error.h"
 
+#if defined(_MSC_VER) && !defined(MSVC_ASM)
+#define MSVC_ASM  1
+#endif
+
 
 namespace theoretica {
 

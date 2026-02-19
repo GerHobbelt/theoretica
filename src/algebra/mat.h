@@ -206,13 +206,31 @@ namespace theoretica {
 		/// @param diagonal The value for the diagonal entries.
 		/// @param n Number of rows.
 		/// @param k Number of columns.
-		mat(Type diagonal, unsigned int n = 0, unsigned int k = 0) {
+		mat(Type diagonal, unsigned int n, unsigned int k) {
 			
 			if (n && k)
 				resize(n, k);
 
+			if (n != rows() && k != cols()) {
+				TH_MATH_ERROR("mat::mat()", n, MathError::ImpossibleOperation);
+				return;
+			}
+
 			algebra::mat_zeroes(*this);
-			const unsigned int m = min(n, k);
+			const unsigned int m = min(rows(), cols());
+
+			for (unsigned int i = 0; i < m; ++i)
+				get(i, i) = diagonal;
+		}
+
+
+		/// Constructor that initializes a diagonal matrix with equal entries on the diagonal.
+		///
+		/// @param diagonal The value for the diagonal entries.
+		mat(Type diagonal) {
+
+			algebra::mat_zeroes(*this);
+			const unsigned int m = min(rows(), cols());
 
 			for (unsigned int i = 0; i < m; ++i)
 				get(i, i) = diagonal;
@@ -644,12 +662,14 @@ namespace theoretica {
 		/// allocated matrices cannot change size, this function
 		/// only checks whether the target size is the same
 		/// as the matrix's.
-		inline mat<Type, N, K> resize(unsigned int n, unsigned int k) const {
+		inline mat<Type, N, K> resize(unsigned int n, unsigned int k) {
 
 			if(rows() != n) {
 				TH_MATH_ERROR("mat::resize", n, MathError::InvalidArgument);
+				algebra::mat_error(*this);
 			} else if(cols() != k) {
 				TH_MATH_ERROR("mat::resize", k, MathError::InvalidArgument);
+				algebra::mat_error(*this);
 			}
 
 			return *this;

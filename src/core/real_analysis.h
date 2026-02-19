@@ -146,7 +146,7 @@ namespace theoretica {
 	inline real sqrt(real x) {
 
 		if(x < 0) {
-			TH_MATH_ERROR("sqrt", x, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("sqrt", x, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -431,11 +431,11 @@ namespace theoretica {
 		if(x <= 0) {
 
 			if(x == 0) {
-				TH_MATH_ERROR("log2", x, OUT_OF_RANGE);
+				TH_MATH_ERROR("log2", x, MathError::OutOfRange);
 				return -inf();
 			}
 
-			TH_MATH_ERROR("log2", x, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("log2", x, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -496,11 +496,11 @@ namespace theoretica {
 		if(x <= 0) {
 
 			if(x == 0) {
-				TH_MATH_ERROR("log10", x, OUT_OF_RANGE);
+				TH_MATH_ERROR("log10", x, MathError::OutOfRange);
 				return -inf();
 			}
 
-			TH_MATH_ERROR("log10", x, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("log10", x, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -527,11 +527,11 @@ namespace theoretica {
 		if(x <= 0) {
 
 			if(x == 0) {
-				TH_MATH_ERROR("ln", x, OUT_OF_RANGE);
+				TH_MATH_ERROR("ln", x, MathError::OutOfRange);
 				return -inf();
 			}
 
-			TH_MATH_ERROR("ln", x, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("ln", x, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -554,7 +554,7 @@ namespace theoretica {
 	inline UnsignedIntType ilog2(UnsignedIntType x) {
 
 		if(x == 0) {
-			TH_MATH_ERROR("ilog2", x, OUT_OF_RANGE);
+			TH_MATH_ERROR("ilog2", x, MathError::OutOfRange);
 			return std::numeric_limits<UnsignedIntType>::max();
 		}
 
@@ -816,7 +816,7 @@ namespace theoretica {
 	inline real root(real x, int n) {
 
 		if(((n % 2 == 0) && (x < 0)) || (n == 0)) {
-			TH_MATH_ERROR("root", n, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("root", n, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -867,7 +867,7 @@ namespace theoretica {
 		}
 
 		if(i >= OPTIMIZATION_NEWTON_ITER) {
-			TH_MATH_ERROR("root", i, NO_ALGO_CONVERGENCE);
+			TH_MATH_ERROR("root", i, MathError::NoConvergence);
 			return nan();
 		}
 
@@ -965,7 +965,7 @@ namespace theoretica {
 		asm ("fsincos" : "=t"(c), "=u"(s) : "0"(x));
 
 		if(abs(c) < MACH_EPSILON) {
-			TH_MATH_ERROR("tan", c, DIV_BY_ZERO);
+			TH_MATH_ERROR("tan", c, MathError::DivByZero);
 			return nan();
 		}
 
@@ -989,7 +989,7 @@ namespace theoretica {
 		const real c = cos(x);
 
 		if(abs(c) < MACH_EPSILON) {
-			TH_MATH_ERROR("tan", c, DIV_BY_ZERO);
+			TH_MATH_ERROR("tan", c, MathError::DivByZero);
 			return nan();
 		}
 
@@ -1017,7 +1017,7 @@ namespace theoretica {
 #endif
 
 		if(abs(s) < MACH_EPSILON) {
-			TH_MATH_ERROR("cot", s, DIV_BY_ZERO);
+			TH_MATH_ERROR("cot", s, MathError::DivByZero);
 			return nan();
 		}
 
@@ -1063,7 +1063,7 @@ namespace theoretica {
 	inline real asin(real x) {
 
 		if(abs(x) > 1) {
-			TH_MATH_ERROR("asin", x, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("asin", x, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -1081,7 +1081,7 @@ namespace theoretica {
 	inline real acos(real x) {
 
 		if(abs(x) > 1) {
-			TH_MATH_ERROR("acos", x, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("acos", x, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -1104,7 +1104,7 @@ namespace theoretica {
 		if(x == 0) {
 
 			if(y == 0) {
-				TH_MATH_ERROR("atan2", y, OUT_OF_DOMAIN);
+				TH_MATH_ERROR("atan2", y, MathError::OutOfDomain);
 				return nan();
 			}
 
@@ -1169,7 +1169,7 @@ namespace theoretica {
 	inline real acosh(real x) {
 
 		if(x < 1) {
-			TH_MATH_ERROR("acosh", x, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("acosh", x, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -1181,7 +1181,7 @@ namespace theoretica {
 	inline real atanh(real x) {
 
 		if(x < -1 || x > 1) {
-			TH_MATH_ERROR("atanh", x, OUT_OF_DOMAIN);
+			TH_MATH_ERROR("atanh", x, MathError::OutOfDomain);
 			return nan();
 		}
 
@@ -1233,7 +1233,7 @@ namespace theoretica {
 	TH_CONSTEXPR inline IntType binomial_coeff(unsigned int n, unsigned int m) {
 
 		if(n < m) {
-			TH_MATH_ERROR("binomial_coeff", n, IMPOSSIBLE_OPERATION);
+			TH_MATH_ERROR("binomial_coeff", n, MathError::ImpossibleOperation);
 			return 0;
 		}
 

@@ -11,6 +11,7 @@ var complex__analysis_8h =
     [ "identity", "complex__analysis_8h.html#a3901b8b9a442e4b71368650c2ce1ee31", null ],
     [ "inverse", "complex__analysis_8h.html#a3e9b9fcd589d1358fb90effc83e1fc04", null ],
     [ "ln", "complex__analysis_8h.html#aeaa4a4d5af15f371b28d87d35b504aae", null ],
+    [ "powf", "complex__analysis_8h.html#ad640eebf1ea572dbe9219eab63889762", null ],
     [ "sin", "complex__analysis_8h.html#a2dbb7d4dc0c7a5138e34212ddd8dcda2", null ],
     [ "sqrt", "complex__analysis_8h.html#a42af84f096a0f9e11fdb72d13990bd52", null ],
     [ "square", "complex__analysis_8h.html#af13ddee06543aa9aa3deb827efd44f63", null ],

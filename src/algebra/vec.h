@@ -132,13 +132,12 @@ namespace theoretica {
 
 
 		/// Copy constructor
-		template<unsigned int M>
-		vec(const vec<Type, M>& other) {
-
-			if (N == other.size())
-				algebra::vec_copy(*this, other);
-			else
-				algebra::vec_error(*this);
+		template <
+			typename Vector,
+			enable_vector<Vector> = true
+		>
+		vec(const Vector& other) {
+			algebra::vec_copy(*this, other);
 		}
 
 
@@ -235,14 +234,14 @@ namespace theoretica {
 
 
 		/// Dot product between vectors (v * w = v.x * w.x + ...)
-		template<typename Vector>
+		template<typename Vector, enable_vector<Vector> = true>
 		inline Type dot(const Vector& other) const {
 			return algebra::dot(*this, other);
 		}
 
 
 		/// Dot product between vectors (v * w = v.x * w.x + ...)
-		template<typename Vector>
+		template<typename Vector, enable_vector<Vector> = true>
 		inline Type operator*(const Vector& other) const {
 			return dot(other);
 		}
@@ -487,7 +486,7 @@ namespace theoretica {
 
 			if(i >= n) {
 				TH_MATH_ERROR("vec::euclidean_base", i, MathError::InvalidArgument);
-				return vec<Type, N>(Type(nan()));
+				return make_error<vec<Type, N>>(n);
 			}
 
 			vec<Type, N> e_i = vec<Type, N>(n, Type(0.0));
@@ -584,8 +583,11 @@ namespace theoretica {
 		}
 
 		/// Copy constructor
-		template<unsigned int M>
-		vec(const vec<Type, M>& other) {
+		template <
+			typename Vector,
+			enable_vector<Vector> = true
+		>
+		vec(const Vector& other) {
 			algebra::vec_copy(*this, other);
 		}
 
@@ -663,14 +665,14 @@ namespace theoretica {
 
 
 		/// Dot product between vectors (v * w = v.x * w.x + ...)
-		template<typename Vector>
+		template<typename Vector, enable_vector<Vector> = true>
 		inline Type dot(const Vector& other) const {
 			return algebra::dot(*this, other);
 		}
 
 
 		/// Dot product between vectors (v * w = v.x * w.x + ...)
-		template<typename Vector>
+		template<typename Vector, enable_vector<Vector> = true>
 		inline Type operator*(const Vector& other) const {
 			return dot(other);
 		}

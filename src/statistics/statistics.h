@@ -508,7 +508,7 @@ namespace theoretica {
 							return exp(-x * x / 2) / SQRTPI / SQRT2;
 						}, -new_x, 1E-16, 25);
 
-					return 0.5 + integral_romberg_tol([=](real x) {
+					return 0.5 + integral_romberg([=](real x) {
 						return exp(-x * x / 2) / SQRTPI / SQRT2;
 					}, new_x, 0, 1E-16);
 				} else {
@@ -518,7 +518,7 @@ namespace theoretica {
 							return exp(-x * x / 2) / SQRTPI / SQRT2;
 						}, new_x, 1E-16, 25);
 
-					return 0.5 - integral_romberg_tol([=](real x) {
+					return 0.5 - integral_romberg([=](real x) {
 						return exp(-x * x / 2) / SQRTPI / SQRT2;
 					}, 0, new_x, 1E-16);
 				}
@@ -531,7 +531,7 @@ namespace theoretica {
 			if((ndf > 70 && chi_sqr < (ndf / 2.0))) {
 
 				// Use equivalent formula around potential singularity
-				real res = integral_romberg_tol([=](real x) {
+				real res = integral_romberg([=](real x) {
 					return pow(sqrt(x + chi_sqr / 2), ndf - 2) * exp(-x);
 				}, 0, 1, 1E-12);
 

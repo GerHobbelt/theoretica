@@ -25,7 +25,7 @@ If you'd like to join us, to learn or to bring your expertise, make sure to read
 Theoretica is constantly developed and improved with new ideas!
 
 
-## 🚀 Features
+## Features
 [![Test on Linux](https://github.com/chaotic-society/theoretica/actions/workflows/test-linux.yml/badge.svg)](https://github.com/chaotic-society/theoretica/actions/workflows/test-linux.yml) [![Test on Windows](https://github.com/chaotic-society/theoretica/actions/workflows/test-windows.yml/badge.svg)](https://github.com/chaotic-society/theoretica/actions/workflows/test-windows.yml) [![Test on MacOS](https://github.com/chaotic-society/theoretica/actions/workflows/test-macos.yml/badge.svg)](https://github.com/chaotic-society/theoretica/actions/workflows/test-macos.yml)
 
 Theoretica handles the heavy lifting across multiple scientific domains:
@@ -39,7 +39,7 @@ Theoretica handles the heavy lifting across multiple scientific domains:
 
 There's also a new experimental [GUI module](https://github.com/chaotic-society/theoretica-gui) being developed, for visualizing results directly in your code.
 
-## 🦋 Showcase: Simulating Chaos
+## Showcase: Simulating Chaos
 The following code solves a differential equation, such as the [Lorenz attractor](https://en.wikipedia.org/wiki/Lorenz_system):
 
 ```cpp
@@ -70,7 +70,7 @@ int main() {
 
 You can find many more examples in the [examples](https://github.com/chaotic-society/theoretica/tree/master/examples) folder.
 
-## 🛠️ Setup
+## Setup
 
 **Theoretica is a header-only library and has no dependencies, so you can include it in your projects straight-away!** To use the library, you can include single headers or use `theoretica.h` which includes all modules, or alternatively include `theoretica_mini.h` which includes only base modules.
 
@@ -82,25 +82,25 @@ cmake ..
 # Use your chosen compiler
 ```
 
-## 📖 Documentation
+## Documentation
 [![Documentation](https://img.shields.io/badge/Doxygen-docs-blue?style=flat&cacheSeconds=https%3A%2F%2Fchaotic-society.github.io%2Ftheoretica%2F&link=https%3A%2F%2Fchaotic-society.github.io%2Ftheoretica%2F)](https://chaotic-society.github.io/theoretica)
 
 The documentation for the project is available [here](https://chaotic-society.github.io/theoretica). The documentation is written using Doxygen syntax alongside the source code and the online version is automatically updated on each commit. The bibliography used during research for the library is listed in the [Bibliography](https://github.com/chaotic-society/theoretica/blob/master/txt/BIBLIOGRAPHY.md). To learn more about the design choices behind the library, you can read the RFC documents in this [folder](https://github.com/chaotic-society/documents/tree/main/specification/theoretica/rfc).
 
 
-## 🤝 Join Us!
+## Join Us!
 
 We believe that the best scientific software is built by communities. Regardless of your background, your participation is valuable.
 
 **How you can make an impact:**
 * 🐛 **Report Bugs**: Found a bug? Open an issue!
-* 💡 **Suggest Features**: Need a specific numerical method or feature? Let us know.
-* ⌨️ **Write Code**: Check out our `good first issue` labels. We are always looking for new solvers, optimizations and features.
+* 💡 **Suggest Features**: Need a specific numerical method or feature? Just let us know.
+* ⌨️ **Write Code**: Check out our `good first issue` labels. We are always looking for new solvers, optimizations and features!
 * 📖 **Improve Docs**: Help us make Theoretica accessible to scientists and students worldwide.
 
 Have a look at the [Contributing Guide](https://github.com/chaotic-society/theoretica/blob/master/txt/CONTRIBUTING.md) to learn more!
 
-## 📑 License
+## License
 [![License](https://img.shields.io/github/license/chaotic-society/theoretica)](https://choosealicense.com/licenses/lgpl-3.0/)
 
 The project is currently under the [GNU Lesser General Public License 3.0](https://github.com/chaotic-society/theoretica/blob/master/LICENSE). You may learn more about it [here](https://choosealicense.com/licenses/lgpl-3.0/).

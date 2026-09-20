@@ -148,14 +148,17 @@ namespace io {
 		std::vector<real> col;
 
 		if (io::is_number(line)) {
+
+			real first;
+
 			try {
 				std::replace(line.begin(), line.end(), ',', '.');
-				real first = std::stod(line);
+				first = std::stod(line);
 				col.emplace_back(first);
 			} catch (const std::invalid_argument& e) {
 				// Do nothing, the entry is not a number
 			} catch(const std::out_of_range& e) {
-				TH_MATH_ERROR("io::read_csv", filename, MathError::OutOfRange);
+				TH_MATH_ERROR("io::read_csv", first, MathError::OutOfRange);
 			}
 		}
 

@@ -106,7 +106,7 @@ namespace theoretica {
 
 	/// @class math_exception
 	/// A class for representing mathematical errors. 
-	class math_exception : std::exception {
+	class math_exception : public std::exception {
 
 	private:
 		MathError err;

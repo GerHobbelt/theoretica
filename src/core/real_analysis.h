@@ -1343,7 +1343,10 @@ namespace theoretica {
 	///
 	/// @tparam Type The type of the number to create
 	/// @return A number representing an error state
-	template<typename Type = real>
+	template <
+		typename Type = real,
+		disable_vector<Type> = true
+	>
 	TH_CONSTEXPR inline Type make_error() {
 		return Type(nan());
 	}

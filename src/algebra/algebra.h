@@ -772,7 +772,7 @@ namespace theoretica {
 			}
 
 			Vector res;
-			res.resize(v.size());
+			res.resize(A.rows());
 			vec_zeroes(res);
 
 			for (unsigned int i = 0; i < A.rows(); ++i)
@@ -786,6 +786,12 @@ namespace theoretica {
 
 		/// Returns the matrix transformation of a vector.
 		/// Equivalent to the operation A * v
+		///
+		/// @note The resulting vector has the same type as the input vector,
+		/// this may cause issues if statically allocated containers are used.
+		/// In those case, prefer the other overload of transform, passing
+		/// the appropriate container to store the result.
+		///
 		/// @param A The matrix transformation
 		/// @param v The vector to transform
 		/// @return The transformed vector
@@ -793,7 +799,7 @@ namespace theoretica {
 		inline Vector transform(const Matrix& A, const Vector& v) {
 
 			Vector res;
-			res.resize(v.size());
+			res.resize(A.rows());
 
 			if(v.size() != A.cols()) {
 				TH_MATH_ERROR("algebra::transform", v.size(), MathError::InvalidArgument);
@@ -825,7 +831,7 @@ namespace theoretica {
 				return vec_error(res);
 			}
 
-			if(res.size() != v.size()) {
+			if(res.size() != A.rows()) {
 				TH_MATH_ERROR("algebra::transform", res.size(), MathError::InvalidArgument);
 				return vec_error(res);
 			}
@@ -1278,6 +1284,66 @@ namespace theoretica {
 
 			for (unsigned int i = 0; i < v1.size(); ++i)
 				res[i] = v1[i] - v2[i];
+
+			return res;
+		}
+
+
+		/// Multiply a vector by a matrix, returning the result.
+		///
+		/// @param v The vector to multiply
+		/// @param A The matrix to multiply by
+		/// @return The result of the multiplication of the vector by the matrix
+		template<typename ReturnVector, typename Vector, typename Matrix>
+		inline ReturnVector vec_mat_mul(const Vector& v, const Matrix& A) {
+
+			ReturnVector res;
+			res.resize(A.cols());
+
+			if(v.size() != A.rows()) {
+				TH_MATH_ERROR("algebra::vec_mul", v.size(), MathError::InvalidArgument);
+				return vec_error(res);
+			}
+
+			if(res.size() != A.cols()) {
+				TH_MATH_ERROR("algebra::vec_mul", res.size(), MathError::ImpossibleOperation);
+				return vec_error(res);
+			}
+
+			vec_zeroes(res);
+
+			for (unsigned int i = 0; i < A.rows(); ++i)
+				for (unsigned int j = 0; j < A.cols(); ++j)
+					res[j] += v[i] * A(i, j);
+
+			return res;
+		}
+
+
+		/// Multiplty a vector by a matrix and store the result in another vector.
+		///
+		/// @param res The vector to overwrite with the result
+		/// @param v The vector to multiply
+		/// @param A The matrix to multiply by
+		/// @return A reference to the overwritten vector
+		template<typename Vector1, typename Vector2, typename Matrix>
+		inline Vector1& vec_mat_mul(Vector1& res, const Vector2& v, const Matrix& A) {
+
+			if(v.size() != A.rows()) {
+				TH_MATH_ERROR("algebra::vec_mul", v.size(), MathError::InvalidArgument);
+				return vec_error(res);
+			}
+
+			if(res.size() != A.cols()) {
+				TH_MATH_ERROR("algebra::vec_mul", res.size(), MathError::InvalidArgument);
+				return vec_error(res);
+			}
+
+			vec_zeroes(res);
+
+			for (unsigned int i = 0; i < A.rows(); ++i)
+				for (unsigned int j = 0; j < A.cols(); ++j)
+					res[j] += v[i] * A(i, j);
 
 			return res;
 		}

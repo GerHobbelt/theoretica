@@ -1277,6 +1277,25 @@ namespace theoretica {
 	}
 
 
+	/// Compute the greatest common divisor of two numbers using Euclid's algorithm.
+	///
+	/// @param a An integer number
+	/// @param b An integer number
+	/// @return The greatest common divisor of a and b
+	template <
+		typename Integer1, typename Integer2,
+		typename = std::enable_if_t<std::is_integral<Integer1>::value>,
+		typename = std::enable_if_t<std::is_integral<Integer2>::value>
+	>
+	Integer1 gcd(Integer1 a, Integer2 b) {
+
+		if (b == 0)
+			return a > 0 ? a : -a;
+
+		return gcd(b, a % b);
+	}
+
+
 	/// Convert degrees to radians
 	/// @param degrees An angle in degrees
 	/// @return The converted angle in radians

@@ -338,17 +338,17 @@ int main(int argc, char const *argv[]) {
 
 
 	{
-		auto result = maximize_bisection(max1d<real>, dmax1d, -2.0, 2.0);
+		auto result = maximize_bisect(max1d<real>, dmax1d, -2.0, 2.0);
 
 		ctx.equals(
-			"maximize_bisection (1)",
+			"maximize_bisect (1)",
 			result.value,
 			0.0,
 			1E-07
 		);
 
 		ctx.equals(
-			"maximize_bisection (1) converged",
+			"maximize_bisect (1) converged",
 			result.converged(),
 			true
 		);

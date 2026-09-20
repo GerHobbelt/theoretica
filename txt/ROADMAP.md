@@ -1,6 +1,6 @@
 # Theoretica Development Roadmap
 
-> **Last Updated:** 2026-03-16
+> **Last Updated:** 2026-05-21
 > **Author:** M. Isgrò
 > 
 > This document outlines the strategic direction and major initiatives for the Theoretica project.
@@ -30,8 +30,8 @@ The `autodiff` module will particularly benefit from this change, as C++20 conce
 
 **Key Milestones:**
 - [x] Define C++ standard separation strategy between core and advanced modules (Target: January 2026)
-- [ ] Upgrade advanced modules to C++20 (`autodiff`, `optimization`) (Target: March 2026)
-- [ ] Ensure and test C++14 compatibility of core modules (`algebra`, `complex`, `core`, `calculus`) (Target: March 2026)
+- [x] Upgrade advanced modules to C++20 (`autodiff`, `optimization`) (Target: March 2026)
+- [x] Ensure and test C++14 compatibility of core modules (`algebra`, `complex`, `core`, `calculus`) (Target: March 2026)
 - [ ] Document compiler requirements per module/header (Target: March 2026)
 - [ ] Add embedded systems-specific features and testing (Target: March 2026)
 
@@ -70,12 +70,12 @@ Some key features are currently missing from Theoretica that limit its usability
 **Key Milestones:**
 - [ ] Write missing test units for untested modules (Target: March 2026)
 - [x] Implement CSV IO functionality in new `io` module (Target: February 2026)
-- [ ] Implement HDF5 IO support (with optional build flag) (Target: March 2026)
-- [ ] Document IO module with examples (Target: March 2026)
+- [x] Implement HDF5 IO support (with optional build flag) (Target: March 2026)
+- [x] Document IO module with examples (Target: March 2026)
 
 **Technical Considerations:**
 - CSV: Native C++ implementation, no external dependencies
-- HDF5: Optional dependency, enabled via CMake flag (`THEORETICA_ENABLE_HDF5`)
+- HDF5: Optional dependency, enabled via CMake flag (`THEORETICA_HAS_HDF5`)
 - API design should follow Theoretica's functional programming principles
 - Integration with existing data structures such as `mat<>` and `vec<>`
 
@@ -87,7 +87,7 @@ Some key features are currently missing from Theoretica that limit its usability
 ---
 
 ### 🚀 Priority 3: GPU and CPU acceleration
-**Status:** 🔴 Planning
+**Status:** 🟡 **In Progress**
 **Target:** Q2 2026
 **RFC:** Under development
 

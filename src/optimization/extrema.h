@@ -192,7 +192,7 @@ namespace theoretica {
 	/// @param b The upper extreme of the search interval.
 	/// @return The coordinate of the local maximum.
 	template<typename RealFunction>
-	inline iter_result<real> maximize_bisection(
+	inline iter_result<real> maximize_bisect(
 		RealFunction f, RealFunction Df,
 		real a, real b,
 		real tolerance = OPTIMIZATION_TOL,
@@ -203,7 +203,7 @@ namespace theoretica {
 		// Approximate the function concavity
 		if(deriv_central(Df, z) > 0) {
 
-			TH_MATH_ERROR("maximize_bisection", z, MathError::NoConvergence);
+			TH_MATH_ERROR("maximize_bisect", z, MathError::NoConvergence);
 
 			// If the root finding algorithm converged but found a solution
 			// with the wrong concavity (minimum instead of maximum),

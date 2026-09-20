@@ -779,7 +779,7 @@ namespace theoretica {
 				for (unsigned int j = 0; j < A.cols(); ++j)
 					res[i] += A(i, j) * v[j];
 
-			vec_copy(res, v);
+			vec_copy(v, res);
 			return v;
 		}
 
@@ -980,7 +980,7 @@ namespace theoretica {
 		/// @param B The second matrix to combine
 		/// @return A reference to the overwritten matrix
 		template<typename Field1, typename Matrix1, typename Field2, typename Matrix2>
-		inline Matrix2& mat_lincomb(
+		inline Matrix1& mat_lincomb(
 			Field1 alpha, Matrix1& A, Field2 beta, const Matrix2& B) {
 
 			if(A.rows() != B.rows()) {
@@ -1040,7 +1040,7 @@ namespace theoretica {
 				for (unsigned int j = 0; j < A.cols(); ++j)
 					res(i, j) = A(i, j) * alpha + B(i, j) * beta;
 
-			return A;
+			return res;
 		}
 
 
@@ -1320,7 +1320,7 @@ namespace theoretica {
 		}
 
 
-		/// Multiplty a vector by a matrix and store the result in another vector.
+		/// Multiply a vector by a matrix and store the result in another vector.
 		///
 		/// @param res The vector to overwrite with the result
 		/// @param v The vector to multiply
@@ -1705,10 +1705,10 @@ namespace theoretica {
 
 			// Solve using forward substitution
 			for (unsigned int i = 0; i < L.cols(); ++i) {
-				
-				Type sum = L(i, 0) * x[0];
 
-				for (unsigned int j = 1; j < i; ++j)
+				Type sum = Type(0.0);
+
+				for (unsigned int j = 0; j < i; ++j)
 					sum += L(i, j) * x[j];
 
 				if (abs(L(i, i)) < MACH_EPSILON) {
@@ -1752,10 +1752,10 @@ namespace theoretica {
 
 			// Solve using backward substitution
 			for (int i = U.rows() - 1; i >= 0; --i) {
-				
-				Type sum = U(i, i + 1) * x[i + 1];
 
-				for (unsigned int j = i + 2; j < U.cols(); ++j)
+				Type sum = Type(0.0);
+
+				for (unsigned int j = i + 1; j < U.cols(); ++j)
 					sum += U(i, j) * x[j];
 
 				if (abs(U(i, i)) < MACH_EPSILON) {
@@ -1785,11 +1785,8 @@ namespace theoretica {
 				return solve_triangular_lower(T, b);
 			else if(is_upper_triangular(T))
 				return solve_triangular_upper(T, b);
-			else {
-				Vector err;
-				err.resize(b.size());
-				return vec_error(err);
-			}
+			else
+				return make_error<Vector>();
 		}
 
 
@@ -2177,7 +2174,7 @@ namespace theoretica {
 				return vector_element_t<Vector>(nan());
 			}
 
-			return dot(x, transform(A, x)) / p;
+			return dot(x, algebra::transform(A, x)) / p;
 		}
 
 
@@ -2221,7 +2218,7 @@ namespace theoretica {
 			for (i = 1; i <= max_iter; ++i) {
 				
 				x_prev = x_curr;
-				x_curr = normalize(transform(A, x_prev));
+				x_curr = normalize(algebra::transform(A, x_prev));
 
 				// Stop the algorithm when |x_k+1 +- x_k| is
 				// less then the tolerance in module
@@ -2287,7 +2284,7 @@ namespace theoretica {
 			for (i = 1; i <= max_iter; ++i) {
 				
 				x_prev = x_curr;
-				x_curr = normalize(transform(A, x_prev));
+				x_curr = normalize(algebra::transform(A, x_prev));
 
 				// Stop the algorithm when |x_k+1 +- x_k| is
 				// less then the tolerance in module
@@ -2559,7 +2556,7 @@ namespace theoretica {
 				// Update the eigenvalue approximation
 				// using Rayleigh quotient (avoiding normalization)
 				lambda_prev = lambda_curr;
-				lambda_curr = dot(x_curr, transform(A, x_curr));
+				lambda_curr = dot(x_curr, algebra::transform(A, x_curr));
 
 				// Shift the diagonal by the difference between
 				// subsequent eigenvalues steps, to avoid copying matrix A
@@ -2582,7 +2579,7 @@ namespace theoretica {
 				return make_error<Type>();
 			}
 
-			return dot(x_curr, transform(A, x_curr));
+			return dot(x_curr, algebra::transform(A, x_curr));
 		}
 
 

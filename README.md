@@ -16,11 +16,11 @@ If you'd like to join us, to learn or to bring your expertise, make sure to read
 
 ## Why Theoretica?
 
-* **🧠 Intuitive API**: Mathematical expressions should look like math, not like machine code.
-* **⚡ Blazing Fast**: Built with zero-overhead abstractions to squeeze out every drop of performance from your CPU.
-* **🔋 Batteries Included**: Out-of-the-box support for advanced numerical methods, without any dependencies.
+* **🧠 Intuitive API**: Mathematical expressions should look like math, not machine code.
+* **⚡ Blazingly Fast**: Zero-overhead abstractions squeeze out every drop of performance from your CPU.
+* **🔋 Batteries Included**: Out-of-the-box support for numerical methods, without dependencies.
 * **🖥️ HPC Support**: Growing support for hardware accelleration, making your simulations even faster.
-* **🎚️ Embedded Friendly**: Runs anywhere, even with low resources, making it a great choice for embedded systems.
+* **🎚️ Embedded Friendly**: Runs anywhere, even with low resources, making it a good choice for embedded systems.
 
 Theoretica is constantly developed and improved with new ideas!
 
@@ -32,9 +32,9 @@ Theoretica handles the heavy lifting across multiple scientific domains:
 * **Solvers**: Differential equation solvers, Monte Carlo methods, integral quadratures.
 * **Linear Algebra**: Standalone linear algebra algorithms for dense matrices.
 * **Automatic Differentiation**: Evaluate exact derivatives without manual analytical calculations or numerical approximations.
-* **Optimization**: Built-in routines for finding function extrema and roots, in arbitrary dimensions.
-* **Statistics**: Methods for regression, fits, histograms, data sampling, and built-in error propagation mechanics.
-* **Signal Processing**: Standalone Fast Fourier Transform support.
+* **Optimization**: Routines for finding function extrema and roots, in arbitrary dimensions.
+* **Statistics**: Methods for linear regression, histograms, data sampling, and built-in error propagation.
+* **Signal Processing**: Built-in Fast Fourier Transform support.
 * **File I/O**: First-class support for storing large-scale data sets using CSV and HDF5 file formats, as well as Data Frames.
 
 There's also a new experimental [GUI module](https://github.com/chaotic-society/theoretica-gui) being developed, for visualizing results directly in your code.
@@ -62,8 +62,7 @@ int main() {
     auto solution = ode::solve_rk4(f, v, 0.0, 50.0);
 
     // Write the solution directly to file
-    std::ofstream file ("attractor.csv");
-    file << solution;
+    io::write_csv("attractor.csv", solution);
 }
 
 ```

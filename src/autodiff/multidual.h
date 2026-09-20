@@ -35,7 +35,7 @@ namespace theoretica {
 			vec<real, N> v;
 
 			// The template argument of the vector type used
-			static constexpr size_t vector_argument = N;
+			static constexpr size_t size_argument = N;
 
 
 			/// Construct a multidual number
@@ -372,7 +372,7 @@ namespace theoretica {
 
 			/// Convert the multidual number to string representation
 			/// @param epsilon The character to use to represent epsilon
-			inline std::string to_string(const std::string& epsilon = "e") const {
+			inline std::string to_string(const std::string& epsilon = "ε") const {
 
 				std::stringstream res;
 				res << a << " + " << v << epsilon;

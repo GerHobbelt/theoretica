@@ -265,8 +265,8 @@ namespace theoretica {
 	}
 
 
-	/// Compute the floor of x
-	/// Computes the maximum integer number that is smaller than x
+	/// Compute the floor of x, as the maximum integer
+	/// number that is smaller than x.
 	/// @param x A real number
 	/// @return The floor of x
 	///

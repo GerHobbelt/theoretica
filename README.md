@@ -1,4 +1,4 @@
-# ⚛️ Theoretica
+# Theoretica
 <!-- Home -->
 <!-- ======== -->
 
@@ -14,7 +14,7 @@ Across many applications in science and data analysis, Theoretica offers the spe
 If you'd like to join us, to learn or to bring your expertise, make sure to read the [Onboarding Guide](https://github.com/chaotic-society/theoretica/blob/master/txt/ONBOARDING.md) and the [Contributing Guide](https://github.com/chaotic-society/theoretica/blob/master/txt/CONTRIBUTING.md). Your help is valuable!
 
 
-## ✨ Why Theoretica?
+## Why Theoretica?
 
 * **🧠 Intuitive API**: Mathematical expressions should look like math, not like machine code.
 * **⚡ Blazing Fast**: Built with zero-overhead abstractions to squeeze out every drop of performance from your CPU.

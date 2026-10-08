@@ -33,10 +33,11 @@ MathJax.Hub.Config({
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign">
    <div id="projectname">Theoretica
    </div>
-   <div id="projectbrief">Mathematical Library</div>
+   <div id="projectbrief">Scientific Computing</div>
   </td>
  </tr>
  </tbody>
@@ -131,9 +132,9 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef THEORETICA_DISABLE_CPP20</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#ifndef THEORETICA_USE_CPP20</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#ifndef THEORETICA_HAS_CPP20</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#if (__cplusplus &gt;= 202002L)</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define THEORETICA_USE_CPP20</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define THEORETICA_HAS_CPP20</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
@@ -215,7 +216,7 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">#ifndef THEORETICA_OPTIMIZATION_MINGRAD_TOLERANCE</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="constants_8h.html#a9a329c368d75aea3b80c881cfc8aa18f">  139</a></span><span class="preprocessor">#define THEORETICA_OPTIMIZATION_MINGRAD_TOLERANCE 1E-3</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="constants_8h.html#a9a329c368d75aea3b80c881cfc8aa18f">  139</a></span><span class="preprocessor">#define THEORETICA_OPTIMIZATION_MINGRAD_TOLERANCE 1E-8</span></div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#ifndef THEORETICA_OPTIMIZATION_MINGRAD_ITER</span></div>
@@ -223,12 +224,12 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#ifndef THEORETICA_STATISTICS_RAND_PREC</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#ifndef THEORETICA_PSEUDORANDOM_PREC</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#ifdef THEORETICA_FLOAT_PREC</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#define THEORETICA_STATISTICS_RAND_PREC (uint64_t(1) &lt;&lt; 23)</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#define THEORETICA_PSEUDORANDOM_PREC (uint64_t(1) &lt;&lt; 23)</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="constants_8h.html#a3c3d063c9fcfc61332eab8c32b49a0bb">  154</a></span><span class="preprocessor">#define THEORETICA_STATISTICS_RAND_PREC (uint64_t(1) &lt;&lt; 31)</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="constants_8h.html#a16170381e0c9fec9109a9babe469b68a">  154</a></span><span class="preprocessor">#define THEORETICA_PSEUDORANDOM_PREC (uint64_t(1) &lt;&lt; 31)</span></div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">#endif</span></div>
@@ -258,11 +259,11 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">#ifdef THEORETICA_LONG_DOUBLE_PREC</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetheoretica.html#a049966946220f1f7e5eae57293703066">real</a> = <span class="keywordtype">long</span> double;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetheoretica.html#a049966946220f1f7e5eae57293703066">real</a> = <span class="keywordtype">long</span> <a class="code hl_function" href="namespacetheoretica.html#a4a267bbfdf38e749e122a2b0cc0a4360">double</a>;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">#elif defined(THEORETICA_FLOAT_PREC)</span></div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetheoretica.html#a049966946220f1f7e5eae57293703066">real</a> = float;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetheoretica.html#a049966946220f1f7e5eae57293703066">real</a> = <a class="code hl_function" href="namespacetheoretica.html#a4a267bbfdf38e749e122a2b0cc0a4360">float</a>;</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#elif defined(THEORETICA_ARBITRARY_PREC)</span></div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
@@ -270,7 +271,7 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="namespacetheoretica.html#a049966946220f1f7e5eae57293703066">  207</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetheoretica.html#a049966946220f1f7e5eae57293703066">real</a> = double;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="namespacetheoretica.html#a049966946220f1f7e5eae57293703066">  207</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacetheoretica.html#a049966946220f1f7e5eae57293703066">real</a> = <a class="code hl_function" href="namespacetheoretica.html#a4a267bbfdf38e749e122a2b0cc0a4360">double</a>;</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
@@ -361,7 +362,7 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="namespacetheoretica.html#a86e5dd300ac007074bcf54bfc9e59c6d">  336</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacetheoretica.html#a86e5dd300ac007074bcf54bfc9e59c6d">OPTIMIZATION_MINGRAD_ITER</a> = <a class="code hl_define" href="constants_8h.html#a0e35dc3b59e56b8c7262a68a0aa5ab4e">THEORETICA_OPTIMIZATION_MINGRAD_ITER</a>;</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="namespacetheoretica.html#a2ab0dc413ccb1d809e2269de05dbf48d">  339</a></span>    <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="namespacetheoretica.html#a2ab0dc413ccb1d809e2269de05dbf48d">STATISTICS_RAND_PREC</a> = <a class="code hl_define" href="constants_8h.html#a3c3d063c9fcfc61332eab8c32b49a0bb">THEORETICA_STATISTICS_RAND_PREC</a>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="namespacetheoretica.html#afeadfad8b6073194fc7a126464dcd3d2">  339</a></span>    <span class="keyword">constexpr</span> <a class="code hl_function" href="namespacetheoretica.html#a4a267bbfdf38e749e122a2b0cc0a4360">uint64_t</a> <a class="code hl_variable" href="namespacetheoretica.html#afeadfad8b6073194fc7a126464dcd3d2">PSEUDORANDOM_PREC</a> = <a class="code hl_define" href="constants_8h.html#a16170381e0c9fec9109a9babe469b68a">THEORETICA_PSEUDORANDOM_PREC</a>;</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="namespacetheoretica.html#a1a92480c95125647eabea5f15aa26f83">  342</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacetheoretica.html#a1a92480c95125647eabea5f15aa26f83">STATISTICS_METROPOLIS_DEPTH</a> = <a class="code hl_define" href="constants_8h.html#a125c2adae715691abe202c3cb3423c84">THEORETICA_STATISTICS_METROPOLIS_DEPTH</a>;</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
@@ -378,10 +379,10 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="ttc" id="aconstants_8h_html_a0e35dc3b59e56b8c7262a68a0aa5ab4e"><div class="ttname"><a href="constants_8h.html#a0e35dc3b59e56b8c7262a68a0aa5ab4e">THEORETICA_OPTIMIZATION_MINGRAD_ITER</a></div><div class="ttdeci">#define THEORETICA_OPTIMIZATION_MINGRAD_ITER</div><div class="ttdoc">Maximum number of iterations for gradient descent minimization.</div><div class="ttdef"><b>Definition</b> constants.h:144</div></div>
 <div class="ttc" id="aconstants_8h_html_a125c2adae715691abe202c3cb3423c84"><div class="ttname"><a href="constants_8h.html#a125c2adae715691abe202c3cb3423c84">THEORETICA_STATISTICS_METROPOLIS_DEPTH</a></div><div class="ttdeci">#define THEORETICA_STATISTICS_METROPOLIS_DEPTH</div><div class="ttdoc">Default depth of the Metropolis algorithm.</div><div class="ttdef"><b>Definition</b> constants.h:162</div></div>
 <div class="ttc" id="aconstants_8h_html_a135a07c3f309f04137c003ded9b8cc16"><div class="ttname"><a href="constants_8h.html#a135a07c3f309f04137c003ded9b8cc16">THEORETICA_OPTIMIZATION_STEFFENSEN_ITER</a></div><div class="ttdeci">#define THEORETICA_OPTIMIZATION_STEFFENSEN_ITER</div><div class="ttdoc">Maximum number of iterations for Steffensen root finding.</div><div class="ttdef"><b>Definition</b> constants.h:104</div></div>
+<div class="ttc" id="aconstants_8h_html_a16170381e0c9fec9109a9babe469b68a"><div class="ttname"><a href="constants_8h.html#a16170381e0c9fec9109a9babe469b68a">THEORETICA_PSEUDORANDOM_PREC</a></div><div class="ttdeci">#define THEORETICA_PSEUDORANDOM_PREC</div><div class="ttdoc">Default precision for random number generation using rand_uniform()</div><div class="ttdef"><b>Definition</b> constants.h:154</div></div>
 <div class="ttc" id="aconstants_8h_html_a212f03078a80c3c28be85caad4b0487f"><div class="ttname"><a href="constants_8h.html#a212f03078a80c3c28be85caad4b0487f">THEORETICA_ALGEBRA_EIGEN_ITER</a></div><div class="ttdeci">#define THEORETICA_ALGEBRA_EIGEN_ITER</div><div class="ttdoc">Maximum number of iterations for eigensolvers.</div><div class="ttdef"><b>Definition</b> constants.h:58</div></div>
 <div class="ttc" id="aconstants_8h_html_a230ae213d64e3cb79e6ff601eec157dd"><div class="ttname"><a href="constants_8h.html#a230ae213d64e3cb79e6ff601eec157dd">THEORETICA_OPTIMIZATION_GOLDENSECTION_ITER</a></div><div class="ttdeci">#define THEORETICA_OPTIMIZATION_GOLDENSECTION_ITER</div><div class="ttdoc">Maximum number of iterations for golden section search.</div><div class="ttdef"><b>Definition</b> constants.h:89</div></div>
 <div class="ttc" id="aconstants_8h_html_a372d072243b6c7c42db84d5debef1924"><div class="ttname"><a href="constants_8h.html#a372d072243b6c7c42db84d5debef1924">THEORETICA_OPTIMIZATION_CHEBYSHEV_ITER</a></div><div class="ttdeci">#define THEORETICA_OPTIMIZATION_CHEBYSHEV_ITER</div><div class="ttdoc">Maximum number of iterations for Chebyshev root finding.</div><div class="ttdef"><b>Definition</b> constants.h:109</div></div>
-<div class="ttc" id="aconstants_8h_html_a3c3d063c9fcfc61332eab8c32b49a0bb"><div class="ttname"><a href="constants_8h.html#a3c3d063c9fcfc61332eab8c32b49a0bb">THEORETICA_STATISTICS_RAND_PREC</a></div><div class="ttdeci">#define THEORETICA_STATISTICS_RAND_PREC</div><div class="ttdoc">Default precision for random number generation using rand_uniform()</div><div class="ttdef"><b>Definition</b> constants.h:154</div></div>
 <div class="ttc" id="aconstants_8h_html_a3ee1447e26f6359f2f7508fba28581b9"><div class="ttname"><a href="constants_8h.html#a3ee1447e26f6359f2f7508fba28581b9">THEORETICA_ALGEBRA_EIGEN_TOL</a></div><div class="ttdeci">#define THEORETICA_ALGEBRA_EIGEN_TOL</div><div class="ttdoc">Tolerance for eigensolvers.</div><div class="ttdef"><b>Definition</b> constants.h:52</div></div>
 <div class="ttc" id="aconstants_8h_html_a452bf502cfc93a36f365b6848756161b"><div class="ttname"><a href="constants_8h.html#a452bf502cfc93a36f365b6848756161b">THEORETICA_OPTIMIZATION_HALLEY_ITER</a></div><div class="ttdeci">#define THEORETICA_OPTIMIZATION_HALLEY_ITER</div><div class="ttdoc">Maximum number of iterations for Halley's method.</div><div class="ttdef"><b>Definition</b> constants.h:94</div></div>
 <div class="ttc" id="aconstants_8h_html_a6a0a879f91cd0cf4a1a062f7b4ec809a"><div class="ttname"><a href="constants_8h.html#a6a0a879f91cd0cf4a1a062f7b4ec809a">THEORETICA_CORE_TAYLOR_ORDER</a></div><div class="ttdeci">#define THEORETICA_CORE_TAYLOR_ORDER</div><div class="ttdoc">Order of Taylor series approximations.</div><div class="ttdef"><b>Definition</b> constants.h:64</div></div>
@@ -400,12 +401,12 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="ttc" id="anamespacetheoretica_html_a10e44603eb761970ec19fd740bda6c21"><div class="ttname"><a href="namespacetheoretica.html#a10e44603eb761970ec19fd740bda6c21">theoretica::OPTIMIZATION_JARRAT_ITER</a></div><div class="ttdeci">constexpr unsigned int OPTIMIZATION_JARRAT_ITER</div><div class="ttdoc">Maximum number of iterations for the Jarrat algorithm.</div><div class="ttdef"><b>Definition</b> constants.h:321</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a1a92480c95125647eabea5f15aa26f83"><div class="ttname"><a href="namespacetheoretica.html#a1a92480c95125647eabea5f15aa26f83">theoretica::STATISTICS_METROPOLIS_DEPTH</a></div><div class="ttdeci">constexpr unsigned int STATISTICS_METROPOLIS_DEPTH</div><div class="ttdoc">Default depth of the Metropolis algorithm.</div><div class="ttdef"><b>Definition</b> constants.h:342</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a27b5dac597409564afdc448fbef23eae"><div class="ttname"><a href="namespacetheoretica.html#a27b5dac597409564afdc448fbef23eae">theoretica::PI2</a></div><div class="ttdeci">constexpr real PI2</div><div class="ttdoc">Half of Pi.</div><div class="ttdef"><b>Definition</b> constants.h:228</div></div>
-<div class="ttc" id="anamespacetheoretica_html_a2ab0dc413ccb1d809e2269de05dbf48d"><div class="ttname"><a href="namespacetheoretica.html#a2ab0dc413ccb1d809e2269de05dbf48d">theoretica::STATISTICS_RAND_PREC</a></div><div class="ttdeci">constexpr uint64_t STATISTICS_RAND_PREC</div><div class="ttdoc">Default precision for random number generation using rand_uniform()</div><div class="ttdef"><b>Definition</b> constants.h:339</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a37fb7f2271fa0e9cd55b47cf4641ca45"><div class="ttname"><a href="namespacetheoretica.html#a37fb7f2271fa0e9cd55b47cf4641ca45">theoretica::SQRTPI</a></div><div class="ttdeci">constexpr real SQRTPI</div><div class="ttdoc">The square root of Pi.</div><div class="ttdef"><b>Definition</b> constants.h:243</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a3bc384f25a1d4c7c19169a5ce6c51710"><div class="ttname"><a href="namespacetheoretica.html#a3bc384f25a1d4c7c19169a5ce6c51710">theoretica::LN10</a></div><div class="ttdeci">constexpr real LN10</div><div class="ttdoc">The natural logarithm of 10.</div><div class="ttdef"><b>Definition</b> constants.h:261</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a4145093692043269fa4c1ebef8b4890f"><div class="ttname"><a href="namespacetheoretica.html#a4145093692043269fa4c1ebef8b4890f">theoretica::LOG210</a></div><div class="ttdeci">constexpr real LOG210</div><div class="ttdoc">The binary logarithm of 10.</div><div class="ttdef"><b>Definition</b> constants.h:252</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a42c1ffb22a0191558cafdaec71c3b81d"><div class="ttname"><a href="namespacetheoretica.html#a42c1ffb22a0191558cafdaec71c3b81d">theoretica::INVSQR2</a></div><div class="ttdeci">constexpr real INVSQR2</div><div class="ttdoc">The inverse of the square root of 2.</div><div class="ttdef"><b>Definition</b> constants.h:273</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a431f69ddc5ada0242f703284a54726f9"><div class="ttname"><a href="namespacetheoretica.html#a431f69ddc5ada0242f703284a54726f9">theoretica::ALGEBRA_ELEMENT_TOL</a></div><div class="ttdeci">constexpr real ALGEBRA_ELEMENT_TOL</div><div class="ttdoc">Tolerance for the elements of matrices.</div><div class="ttdef"><b>Definition</b> constants.h:279</div></div>
+<div class="ttc" id="anamespacetheoretica_html_a4a267bbfdf38e749e122a2b0cc0a4360"><div class="ttname"><a href="namespacetheoretica.html#a4a267bbfdf38e749e122a2b0cc0a4360">theoretica::make_error</a></div><div class="ttdeci">Vector make_error()</div><div class="ttdoc">Create a vector representing an error state, with all NaN values.</div><div class="ttdef"><b>Definition</b> algebra.h:103</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a4d6916417c8d2b817cfc48b8e2a1abb5"><div class="ttname"><a href="namespacetheoretica.html#a4d6916417c8d2b817cfc48b8e2a1abb5">theoretica::INVPI</a></div><div class="ttdeci">constexpr real INVPI</div><div class="ttdoc">The inverse of Pi.</div><div class="ttdef"><b>Definition</b> constants.h:240</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a5a801e1df1e3281002e402a3f310bfb0"><div class="ttname"><a href="namespacetheoretica.html#a5a801e1df1e3281002e402a3f310bfb0">theoretica::OPTIMIZATION_MINGRAD_TOLERANCE</a></div><div class="ttdeci">constexpr real OPTIMIZATION_MINGRAD_TOLERANCE</div><div class="ttdoc">Default tolerance for gradient descent minimization.</div><div class="ttdef"><b>Definition</b> constants.h:333</div></div>
 <div class="ttc" id="anamespacetheoretica_html_a5effdda5848839bedf4a3aace62edc09"><div class="ttname"><a href="namespacetheoretica.html#a5effdda5848839bedf4a3aace62edc09">theoretica::OPTIMIZATION_TOL</a></div><div class="ttdeci">constexpr real OPTIMIZATION_TOL</div><div class="ttdoc">Approximation tolerance for root finding.</div><div class="ttdef"><b>Definition</b> constants.h:297</div></div>
@@ -439,13 +440,14 @@ $(document).ready(function(){initNavTree('constants_8h_source.html',''); initRes
 <div class="ttc" id="anamespacetheoretica_html_aeb6a742ab030fe585063215a644f60df"><div class="ttname"><a href="namespacetheoretica.html#aeb6a742ab030fe585063215a644f60df">theoretica::TAU</a></div><div class="ttdeci">constexpr real TAU</div><div class="ttdoc">The Tau mathematical constant (Pi times 2)</div><div class="ttdef"><b>Definition</b> constants.h:237</div></div>
 <div class="ttc" id="anamespacetheoretica_html_aec69cb2482367d47a3d966c573b04fd6"><div class="ttname"><a href="namespacetheoretica.html#aec69cb2482367d47a3d966c573b04fd6">theoretica::OPTIMIZATION_MINGRAD_GAMMA</a></div><div class="ttdeci">constexpr real OPTIMIZATION_MINGRAD_GAMMA</div><div class="ttdoc">Default step size for gradient descent minimization.</div><div class="ttdef"><b>Definition</b> constants.h:330</div></div>
 <div class="ttc" id="anamespacetheoretica_html_af8b9679476be607282a44a7f7f8b38c4"><div class="ttname"><a href="namespacetheoretica.html#af8b9679476be607282a44a7f7f8b38c4">theoretica::ALGEBRA_EIGEN_TOL</a></div><div class="ttdeci">constexpr real ALGEBRA_EIGEN_TOL</div><div class="ttdoc">Tolerance for eigensolvers.</div><div class="ttdef"><b>Definition</b> constants.h:282</div></div>
+<div class="ttc" id="anamespacetheoretica_html_afeadfad8b6073194fc7a126464dcd3d2"><div class="ttname"><a href="namespacetheoretica.html#afeadfad8b6073194fc7a126464dcd3d2">theoretica::PSEUDORANDOM_PREC</a></div><div class="ttdeci">constexpr uint64_t PSEUDORANDOM_PREC</div><div class="ttdoc">Default precision for random number generation using rand_uniform()</div><div class="ttdef"><b>Definition</b> constants.h:339</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="constants_8h.html">constants.h</a></li>
-    <li class="footer">Generated on Wed Sep 9 2026 12:05:16 for Theoretica by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="constants_8h.html">constants.h</a></li>
+    <li class="footer">Generated on Thu Oct 8 2026 23:50:17 for Theoretica by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

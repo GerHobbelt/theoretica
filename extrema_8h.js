@@ -1,9 +1,9 @@
 var extrema_8h =
 [
-    [ "maximize_bisection", "extrema_8h.html#a4e122e9c54b7f36043851a702fb7e79a", null ],
-    [ "maximize_goldensection", "extrema_8h.html#aab8f4ab246c4b2b8ed36c3893880b6c4", null ],
-    [ "maximize_newton", "extrema_8h.html#accfdc59bb7d6b7bce2173add38cb7a89", null ],
-    [ "minimize_bisection", "extrema_8h.html#a0f9db1a3ca3da10bd76a8af20bb513ae", null ],
-    [ "minimize_goldensection", "extrema_8h.html#ac3a7880ad0abc4b7b03198d90001631c", null ],
-    [ "minimize_newton", "extrema_8h.html#ae9dc22f3165357c127c26aa2a4b6c5e5", null ]
+    [ "maximize_bisect", "extrema_8h.html#a01030df947ec0d7b90bc10021fd4a213", null ],
+    [ "maximize_golden", "extrema_8h.html#a0ebaf12e05ff57d33e4d3ff831d4e779", null ],
+    [ "maximize_newton", "extrema_8h.html#a7f87bd6703f0f4b9d4df5de330ab13ee", null ],
+    [ "minimize_bisect", "extrema_8h.html#afefab09121a082c2b8fb8594f632434e", null ],
+    [ "minimize_golden", "extrema_8h.html#aea6adb91ddb979c887dc437e02254003", null ],
+    [ "minimize_newton", "extrema_8h.html#a864f46d7bf594f06e58dc94017c7083b", null ]
 ];

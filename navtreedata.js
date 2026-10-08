@@ -25,6 +25,17 @@
 var NAVTREE =
 [
   [ "Theoretica", "index.html", [
+    [ "Tutorials", "tutorials.html", [
+      [ "Getting Started", "tut_getting_started.html", null ],
+      [ "Linear Algebra", "tut_algebra.html", null ],
+      [ "Roots and Extrema", "tut_root_finding.html", null ],
+      [ "Statistics and Fits", "tut_statistics.html", null ],
+      [ "Automatic differentiation", "tut_autodiff.html", null ],
+      [ "Differential Equations", "tut_diffeq.html", null ],
+      [ "Integrals and Derivatives", "tut_calculus.html", null ],
+      [ "Polynomials and Interpolation", "tut_polynomials.html", null ]
+    ] ],
+    [ "Bibliography", "md_theoretica_2txt_2_b_i_b_l_i_o_g_r_a_p_h_y.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -60,15 +71,17 @@ var NAVTREEINDEX =
 [
 "algebra_8h.html",
 "classtheoretica_1_1complex.html#adfa6e110991e7e538da117386d6d70ef",
-"classtheoretica_1_1mat.html#a756d27a1a20e7b3f10a86f2efb4e0fdc",
-"classtheoretica_1_1phasor.html",
-"classtheoretica_1_1ratio.html#aa0fd234ef38da6eba29da1c65299b3d3",
-"deriv_8h.html#a69edeaa0ec50e54eeaf1473f83582a68",
-"integral_8h.html#abd783739794f700157cc7f7d6f9d9632",
-"namespacetheoretica.html#a5e295404d1712fb17851fe105715766e",
-"namespacetheoretica.html#af0493013e208bb00505abbc4ca37f292",
-"namespacetheoretica_1_1regression.html",
-"roots_8h.html#a587130155867c6e054e3668a0aed581e"
+"classtheoretica_1_1histogram.html#a238be6d7b8c804d31b89fbc43fef5c34",
+"classtheoretica_1_1mat_3_01_type_00_010_00_010_01_4.html#a633391fc4b04ec8de3a389be4f2e66f2",
+"classtheoretica_1_1phasor.html#af4a77a861634e4efab52105080955f4a",
+"classtheoretica_1_1vec.html#a4f3ddd987fdea5ea38fd4c210cc0478d",
+"dir_a57e94efe769f9ed34acbb385fd2b2a4.html",
+"interpolation_2polynomial_8h.html",
+"namespacetheoretica.html#a4eb87636665493a0584655ad754e4c53",
+"namespacetheoretica.html#ae93349020a59cf77efcca5bb77c0e7f9",
+"namespacetheoretica_1_1io.html#a6d9a04b47b289b3f577d6b53cfa654ffa6adf97f83acf6453d4a6a4b1070f3754",
+"real__analysis_8h.html#a124297369ecba10c8516dc5a920aad1a",
+"structtheoretica_1_1iter__result.html#af00a5398c76bb61b2a52b0d8e851fe6e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

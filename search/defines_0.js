@@ -2,7 +2,7 @@ var searchData=
 [
   ['th_5fconstexpr_0',['TH_CONSTEXPR',['../constants_8h.html#aa0d72dcb7db38b3577234c144089a71a',1,'constants.h']]],
   ['th_5fconstif_1',['TH_CONSTIF',['../constants_8h.html#a98714486a3e652c5b04dbd34146d069d',1,'constants.h']]],
-  ['th_5fmath_5ferror_2',['TH_MATH_ERROR',['../error_8h.html#a3cb22530e3e3a835f4af97e985e6a32e',1,'error.h']]],
+  ['th_5fmath_5ferror_2',['TH_MATH_ERROR',['../core_2error_8h.html#a3cb22530e3e3a835f4af97e985e6a32e',1,'error.h']]],
   ['theoretica_5falgebra_5feigen_5fiter_3',['THEORETICA_ALGEBRA_EIGEN_ITER',['../constants_8h.html#a212f03078a80c3c28be85caad4b0487f',1,'constants.h']]],
   ['theoretica_5falgebra_5feigen_5ftol_4',['THEORETICA_ALGEBRA_EIGEN_TOL',['../constants_8h.html#a3ee1447e26f6359f2f7508fba28581b9',1,'constants.h']]],
   ['theoretica_5falgebra_5felement_5ftol_5',['THEORETICA_ALGEBRA_ELEMENT_TOL',['../constants_8h.html#ab9a6a14e083f6b0e58bcfb3d48de806d',1,'constants.h']]],
@@ -21,7 +21,7 @@ var searchData=
   ['theoretica_5foptimization_5fostrowski_5fiter_18',['THEORETICA_OPTIMIZATION_OSTROWSKI_ITER',['../constants_8h.html#a93ff0c9b628b71df6c6adf5368e08cb0',1,'constants.h']]],
   ['theoretica_5foptimization_5fsteffensen_5fiter_19',['THEORETICA_OPTIMIZATION_STEFFENSEN_ITER',['../constants_8h.html#a135a07c3f309f04137c003ded9b8cc16',1,'constants.h']]],
   ['theoretica_5foptimization_5ftol_20',['THEORETICA_OPTIMIZATION_TOL',['../constants_8h.html#a031daaf86110b420def2d679b7ca4840',1,'constants.h']]],
-  ['theoretica_5fstatistics_5fmetropolis_5fdepth_21',['THEORETICA_STATISTICS_METROPOLIS_DEPTH',['../constants_8h.html#a125c2adae715691abe202c3cb3423c84',1,'constants.h']]],
-  ['theoretica_5fstatistics_5frand_5fprec_22',['THEORETICA_STATISTICS_RAND_PREC',['../constants_8h.html#a3c3d063c9fcfc61332eab8c32b49a0bb',1,'constants.h']]],
+  ['theoretica_5fpseudorandom_5fprec_21',['THEORETICA_PSEUDORANDOM_PREC',['../constants_8h.html#a16170381e0c9fec9109a9babe469b68a',1,'constants.h']]],
+  ['theoretica_5fstatistics_5fmetropolis_5fdepth_22',['THEORETICA_STATISTICS_METROPOLIS_DEPTH',['../constants_8h.html#a125c2adae715691abe202c3cb3423c84',1,'constants.h']]],
   ['theoretica_5fstatistics_5ftryandcatch_5fiter_23',['THEORETICA_STATISTICS_TRYANDCATCH_ITER',['../constants_8h.html#a9df2dd49806e72c313d62bda3e61298e',1,'constants.h']]]
 ];
